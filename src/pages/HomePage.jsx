@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import {
-  FaPhone,
+  FaWhatsappSquare,
   FaEnvelope,
   FaMapMarkerAlt,
   FaUserMd,
   FaUsers,
   FaBrain,
-  FaHeart,
-  FaBook
+  FaInstagramSquare,
+  FaBook,
 } from "react-icons/fa";
 
 const HomePage = () => {
@@ -19,42 +19,45 @@ const HomePage = () => {
 
   const services = [
     {
-      title: "Terapia individual",
-      description:
-        "Sesiones individuales centradas en el crecimiento personal y la sanación.",
+      title: "TERAPIA INDIVIDUAL",
+      description: [
+        "Dificultades relacionadas con la ansiedad.",
+        "Manejo del estrés.",
+        "Mejora de la autoestima.",
+        "Caminos de crecimiento personal.",
+      ],
       icon: <FaUserMd />,
     },
     {
-      title: "Terapia de parejas",
-      description: "Fortalecer las relaciones y mejorar la comunicación",
+      title: "TERAPIA DE PAREJAS",
+      description: [
+        "Fortalecer las relación.",
+        "Mejorar la comunicación.",
+        "Creación de un espacio seguro.",
+      ],
       icon: <FaUsers />,
     },
     {
-      title: "Terapia cognitivo conductual",
-      description:
-        "Enfoque basado en evidencia para superar pensamientos desafiantes",
+      title: "SESIONES DE COACHING",
+      description: [
+        "Coaching individual y personalizado destinado a incrementar el crecimiento personal, orientado a la consecución de objetivos y a la resolución de problemas.",
+      ],
       icon: <FaBrain />,
-    },
-    {
-      title: "Apoyo emocional",
-      description:
-        "Orientación a través de emociones difíciles y transiciones de vida.",
-      icon: <FaHeart />,
     },
   ];
 
   const testimonials = [
     {
-      text: "El enfoque de la Dr. Michielan transformó por completo mi perspectiva sobre la vida.",
-      author: "NOMBRE DE PACIENTE o ANONIMO",
+      text: "Encantada con Martina, es muy profesional y a su vez muy cercana en el trato. Me ha ayudado mucho, y lo sigue haciendo. La recomiendo.",
+      author: "Sofía",
     },
     {
-      text: "El ambiente cálido y comprensivo me hizo sentir seguro para abrirme.",
-      author: "NOMBRE DE PACIENTE o ANONIMO",
+      text: "Hace dos años que empecé con la doctora Michielan. Me animé a hacerlo ya que estaba pasando un momento difícil en mi vida, hoy puedo decir que fue un gran acierto.",
+      author: "Daniel",
     },
     {
-      text: "He visto una mejora notable en mi relación gracias a la terapia de pareja.",
-      author: "NOMBRE DE PACIENTE o ANONIMO",
+      text: "Comencé un trabajo de coaching con Martina porque deseaba hacer un cambio de carrera, ya que trabajaba en algo que nunca me gustó. Martina me acompañó en este proceso y le estoy muy agradecido",
+      author: "Carlos",
     },
   ];
 
@@ -74,8 +77,11 @@ const HomePage = () => {
 
   return (
     <div className="font-sans">
-      {/* ------------------------------------------ Hero Section-------------------------------------------- */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-green-50">
+      {/* ------------------------------------------ Main Section-------------------------------------------- */}
+      <section
+        className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-green-50"
+        id="/"
+      >
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21"
@@ -85,9 +91,11 @@ const HomePage = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-            Dra. Martina Michielan
+            Psicóloga Martina Michielan
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">Psicologa</p>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            PSICÓLOGA CLÍNICA
+          </p>
           <button className="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition duration-300">
             Ponte en contacto
             <FaEnvelope className="text-center m-auto" />
@@ -95,39 +103,53 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/*-------------------------------------------------- About Section----------------------------------------------- */}
-      <section className="py-20 bg-white">
+      {/*-------------------------------------------------- Hero Section----------------------------------------------- */}
+      <section className="py-20 bg-white" id="hero">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0 mr-8">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="md:w-1/2 mb-8 md:mb-0 lg:mr-8">
               <img
-                src="/images/foto-perfil.png"
-                alt="Dr. Sarah Smith"
-                className="rounded-full  max-w-md mx-auto"
+                src="/images/foto-perfil.webp"
+                alt="Psicologa Martina Michielan"
+                className="rounded-3xl max-w-md mx-auto w-3/4 md:w-full"
               />
             </div>
-            <div className="md:w-1/2 md:pl-12">
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">
-                ¿Quien soy?
+
+            <div className="md:pt-5 lg:w-1/2 lg:pl-12">
+              <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">
+                ¿Quién soy y qué hago?
               </h2>
               <p className="text-gray-600 mb-6">
-                Soy una profesional en psicología con más de 5 años de
-                experiencia, me especializo en ayudar a personas y parejas a
-                afrontar los desafíos de la vida. Mi enfoque combina técnicas
-                basadas en evidencia con atención compasiva.
+                Soy Martina, psicóloga italiana licenciada en Psicología Clínica
+                e inscrita en la Orden de Psicólogos de la Región del Véneto,
+                con el número 9333. Además tengo una formación en Coaching
+                Integrativo. Mi función es ayudarte a conseguir la mejor versión
+                de ti mismo/a, acompañándote en este viaje de descubrimiento
+                personal, en el que podrás ampliar tu conciencia, mejorar tu
+                vida, tus relaciones y experimentar un mayor bienestar.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 <li className="flex items-center text-gray-600">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
-                  SI HAY ALGUN DOCTORADO O MASTER AGREGARLO AQUI!!!
+                  <p>
+                    🔹 Nuestras reuniones serán un espacio seguro donde podrás
+                    mostrarte tal cual eres y compartir lo que sientes con total
+                    libertad.
+                  </p>
                 </li>
                 <li className="flex items-center text-gray-600">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
-                  Licenciada en AGREGAR LUGAR DONDE SE OBTUVO LA LICENCIATURA!!!
+                  <p>
+                    🔹Me ocuparé de crear un ambiente de acogida, escucha y
+                    comprensión para que puedas descubrir tus
+                    necesidades/dificultades y acompañarte a afrontarlas.
+                  </p>
                 </li>
                 <li className="flex items-center text-gray-600">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
-                  Certificado de AGREGAR UN CERTIFICADO!!!
+                  <p>
+                    🔹En este viaje descubrirás recursos y habilidades dentro de
+                    ti que no sabías que tenías, podrás desarrollar nuevos
+                    pensamientos y comportamientos que te permitirán vivir mejor
+                    tu presente y avanzar hacia el cambio que deseas lograr.
+                  </p>
                 </li>
               </ul>
             </div>
@@ -136,12 +158,12 @@ const HomePage = () => {
       </section>
 
       {/*------------------------------------------------ Services Section-------------------------------------------- */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" id="services">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
             Sesiones y terapias ofrecidas
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -153,7 +175,11 @@ const HomePage = () => {
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600">{service.description}</p>
+                <ul className="text-gray-600">
+                  {service.description.map((service, i) => {
+                    return <li key={i}>🔹{service}</li>;
+                  })}
+                </ul>
               </div>
             ))}
           </div>
@@ -161,7 +187,7 @@ const HomePage = () => {
       </section>
 
       {/* -----------------------------------------------------Testimonials Section ------------------------------------------*/}
-      <section className="py-20 bg-teal-600">
+      <section className="py-20 bg-teal-600" id="testimonials">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Testimonios de algunos pacientes
@@ -180,7 +206,7 @@ const HomePage = () => {
       </section>
 
       {/*--------------------------------------------------------- Contact Section -------------------------------------------*/}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="contact">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
             Ponte en contacto
@@ -189,12 +215,28 @@ const HomePage = () => {
             <div className="md:w-1/2">
               <div className="space-y-6">
                 <div className="flex items-center">
-                  <FaPhone className="text-teal-600 text-xl mr-4" />
-                  <p className="text-gray-600">(+34) 674-239610</p>
+                  <a
+                    href="https://wa.me/34674239610"
+                    className="flex items-center"
+                    target="_blank"
+                  >
+                    <FaWhatsappSquare className="text-teal-600 text-xl mr-4" />
+                    <p className="text-gray-600">(+34) 674-239610</p>
+                  </a>
                 </div>
                 <div className="flex items-center">
                   <FaEnvelope className="text-teal-600 text-xl mr-4" />
                   <p className="text-gray-600">psi.michielan@gmail.com</p>
+                </div>
+                <div className="flex items-center">
+                  <a
+                    href="https://www.instagram.com/martinamichielan/"
+                    className="flex items-center"
+                    target="_blank"
+                  >
+                    <FaInstagramSquare className="text-teal-600 text-xl mr-4" />
+                    <p className="text-gray-600">@martinamichielan</p>
+                  </a>
                 </div>
                 <div className="flex items-center">
                   <FaMapMarkerAlt className="text-teal-600 text-xl mr-4" />
@@ -206,9 +248,7 @@ const HomePage = () => {
                     <p className="text-gray-600">
                       Sesiones online o presenciales
                     </p>
-                    <p className="text-gray-600">
-                      En Castellano o en Italiano
-                    </p>
+                    <p className="text-gray-600">En Castellano o en Italiano</p>
                   </div>
                 </div>
               </div>
