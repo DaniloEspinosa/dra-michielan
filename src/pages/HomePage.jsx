@@ -29,9 +29,9 @@ const HomePage = () => {
       icon: <FaUserMd />,
     },
     {
-      title: "TERAPIA DE PAREJAS",
+      title: "TERAPIA DE PAREJA",
       description: [
-        "Fortalecer las relación.",
+        "Fortalecer la relación.",
         "Mejorar la comunicación.",
         "Creación de un espacio seguro.",
       ],
@@ -96,10 +96,12 @@ const HomePage = () => {
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
             PSICÓLOGA CLÍNICA
           </p>
-          <button className="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition duration-300">
-            Ponte en contacto
-            <FaEnvelope className="text-center m-auto" />
-          </button>
+          <a href="#contact">
+            <button className="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition duration-300">
+              Ponte en contacto
+              <FaEnvelope className="text-center m-auto" />
+            </button>
+          </a>
         </div>
       </section>
 
@@ -121,7 +123,7 @@ const HomePage = () => {
               </h2>
               <p className="text-gray-600 mb-6">
                 Soy Martina, psicóloga italiana licenciada en Psicología Clínica
-                e inscrita en la Orden de Psicólogos de la Región del Véneto,
+                e inscrita en el Colegio Oficial de Psicologos de la región del Véneto (Italia),
                 con el número 9333. Además tengo una formación en Coaching
                 Integrativo. Mi función es ayudarte a conseguir la mejor versión
                 de ti mismo/a, acompañándote en este viaje de descubrimiento
