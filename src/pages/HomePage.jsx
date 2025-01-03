@@ -123,7 +123,7 @@ const HomePage = () => {
               </h2>
               <p className="text-gray-600 mb-6">
                 Soy Martina, psicóloga italiana licenciada en Psicología Clínica
-                e inscrita en el Colegio Oficial de los Psicologos de la región del Véneto (Italia),
+                e inscrita en el Colegio Oficial de los Psicólogos de la región del Véneto (Italia),
                 con el número 9333. Además tengo una formación en Coaching
                 Integrativo. Mi función es ayudarte a conseguir la mejor versión
                 de ti mismo/a, acompañándote en este viaje de descubrimiento
